@@ -1,0 +1,30 @@
+{
+  "name": "reseau-social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rookies77/reseau-social.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rookies77/reseau-social/issues"
+  },
+  "homepage": "https://github.com/rookies77/reseau-social#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.13",
+    "nodemon": "^2.0.15",
+    "validator": "^13.7.0"
+  }
+}
