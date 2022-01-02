@@ -27,6 +27,10 @@ const userSchema = new mongoose.Schema(
             max: 1024,
             minlength: 6,
         },
+        picture: {
+            type: String,
+            default: "./uploads/profil/random-user.png"
+        },
         bio: {
             type: String,
             max: 1024
@@ -60,7 +64,7 @@ userSchema.pre('save', async function (next) {
     // });
 })
 
-userSchema.statics.login = async function(email, password){
+userSchema.statics.login = async function (email, password) {
     const user = await this.findOne({ email });
     if (user) {
         const auth = await bcrypt.compare(password, user.password);
