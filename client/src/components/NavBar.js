@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { UidContext } from './AppContext';
 import Logout from './log/Logout';
@@ -6,7 +7,7 @@ import Logout from './log/Logout';
 
 const NavBar = () => {
     const uid = useContext(UidContext);
-    
+    const userData = useSelector((state)=>state.userReducer)
 
     return (
         <nav>
@@ -24,7 +25,7 @@ const NavBar = () => {
                         <li></li>
                         <li className='welcome'>
                             <NavLink exact="true" to="/profil">
-                                <h5>Bienvenue</h5>
+                                <h5>Bienvenue {userData.pseudo}</h5>
                             </NavLink>
                         </li>
                         <Logout/>
